@@ -26,11 +26,6 @@ return [
 ];
 ```
 
-* To use:
-```php
-
-```
-
 * Or if do you use laravel make like this:
 
 * Add this lines to yours config/app.php
