@@ -1,0 +1,33 @@
+{
+  "name": "tray-labs/oracle-storage",
+  "description": "Connector to Oracle Cloud Storage",
+  "type": "lib",
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "6.3.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "TrayLabs\\OracleStorage\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "José Henrique Honjoya",
+      "email": "jhonjoya@tray.net.br",
+    },
+    {
+      "name": "Daniel dos Santos Andrade",
+      "email": "dandrade@traylabs.com.br"
+    },
+    {
+      "name": "Leonardo Gonçalves Tramontini",
+      "email": "ltramontini@traylabs.com.br"
+
+    }
+  ],
+  "minimum-stability": "dev"
+}
