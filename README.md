@@ -1,5 +1,7 @@
 # Oracle Storage
 
+[![Build Status](https://travis-ci.org/tray-labs/oracle-storage.svg?branch=master)](https://travis-ci.org/tray-labs/oracle-storage)
+
 A service made to provide, set up your application to connect Oracle cloud storage.
 
 ## Installing
