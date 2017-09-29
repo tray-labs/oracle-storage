@@ -4,5 +4,6 @@ language: php
 # list any PHP version you want to test against
 php:
   - 7.0
-
+before_script:
+  - composer install
 script: phpunit --coverage-text
