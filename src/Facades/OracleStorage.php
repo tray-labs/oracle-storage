@@ -12,6 +12,8 @@ use TrayLabs\OracleStorage\OracleStorage as OracleClass;
 class OracleStorage extends LaravelFacade
 {
     /**
+     * Get the registered name of the component.
+     *
      * @return string
      */
     protected static function getFacadeAccessor()

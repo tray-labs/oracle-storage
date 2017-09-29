@@ -12,12 +12,14 @@ use TrayLabs\OracleStorage\OracleStorage;
 class ServiceProvider extends LaravelServiceProvider
 {
     /**
+     * Indicates if loading of the provider is deferred.
+     *
      * @var bool
      */
     protected $defer = true;
 
     /**
-     *
+     * Bootstrap any application services.
      */
     public function boot()
     {
@@ -25,7 +27,9 @@ class ServiceProvider extends LaravelServiceProvider
     }
 
     /**
+     * Register the service provider.
      *
+     * @return void
      */
     public function register()
     {
@@ -35,6 +39,8 @@ class ServiceProvider extends LaravelServiceProvider
     }
 
     /**
+     * Get the services provided by the provider.
+     *
      * @return array
      */
     public function provides()
