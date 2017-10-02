@@ -15,8 +15,8 @@ class DownloadServiceTest extends TestCase
         $mock = new MockHandler([
             new Response(200, ['Content-Length' => 1000], file_get_contents((__DIR__) . '/../files/images.png')),
         ]);
-        
-        $config = include('src/config/OracleStorage.php');
+
+        $config = require(__DIR__ . '/../../config/OracleStorage.php');
         $handler = HandlerStack::create($mock);
         $client = new Client(['handler' => $handler]);
         
