@@ -10,7 +10,7 @@ class OracleTest extends TestCase
     
     public function testMakeClient()
     {
-        $client = HttpClient::make(include('src/config/OracleStorage.php'));
+        $client = HttpClient::make(require(__DIR__ . '/../../config/OracleStorage.php'));
         $this->assertInstanceOf(Client::class, $client);
         $this->assertNotNull($client->getConfig('handler'));
     }

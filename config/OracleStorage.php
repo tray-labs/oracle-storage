@@ -2,15 +2,15 @@
 
 return [
     'user' => [
-        'username' => env('ORACLE_STORAGE_USERNAME'),
-        'password' => env('ORACLE_STORAGE_PASSWORD')
+        'username' => getenv('ORACLE_STORAGE_USERNAME'),
+        'password' => getenv('ORACLE_STORAGE_PASSWORD')
     ],
     'account' => [
-        'identifier' => env('ORACLE_STORAGE_IDENTIFIER'),
-        'auth_uri' => env('ORACLE_STORAGE_AUTH_URI')
+        'identifier' => getenv('ORACLE_STORAGE_IDENTIFIER'),
+        'auth_uri' => getenv('ORACLE_STORAGE_AUTH_URI')
     ],
     'storage' => [
-        'container' => env('ORACLE_STORAGE_CONTAINER'),
-        'local_path' => env('ORACLE_STORAGE_LOCAL_PATH')
+        'container' => getenv('ORACLE_STORAGE_CONTAINER'),
+        'local_path' => getenv('ORACLE_STORAGE_LOCAL_PATH')
     ]
 ];
