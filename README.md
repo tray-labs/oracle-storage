@@ -44,7 +44,7 @@ return [
 ]
 ```
 
-* Define env variables to connect to OracleStorage
+* Define in the .env files the following variables to connect to OracleStorage
 
 ```ini
 ORACLE_STORAGE_USERNAME=your@email.com
