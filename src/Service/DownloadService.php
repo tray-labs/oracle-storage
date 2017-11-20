@@ -16,7 +16,7 @@ class DownloadService extends OracleService
      * @param string $objectName
      * @return bool
      */
-    public function handle(string $objectName) : bool
+    public function handle(string $objectName)
     {
         if (!is_dir($this->config['storage']['local_path'])) {
             mkdir($this->config['storage']['local_path'], 0777, true);
@@ -25,7 +25,7 @@ class DownloadService extends OracleService
         $response = $this->client->get('/' . $this->config['storage']['container'] . '/' . $objectName, ['sink' => $this->config['storage']['local_path'] . '/' . $objectName]);
         
         if ($response->getStatusCode() == 200) {
-            return true;
+            return $this->config['storage']['local_path'].'/'.$objectName;
         }
         
         return false;
