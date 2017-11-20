@@ -21,7 +21,7 @@ class DownloadServiceTest extends TestCase
         $client = new Client(['handler' => $handler]);
         
         $service = new DownloadService($client, $config);
-        $this->assertTrue($service->handle('images.png'));
+        $this->assertNotNull($service->handle('images.png'));
         $this->assertFileExists($config['storage']['local_path'] . '/' . 'images.png');
         unlink($config['storage']['local_path'] . '/' . 'images.png');
     }
