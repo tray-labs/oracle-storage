@@ -21,11 +21,14 @@ class DownloadService extends OracleService
         if (!is_dir($this->config['storage']['local_path'])) {
             mkdir($this->config['storage']['local_path'], 0777, true);
         }
+    
+        $filePath = $this->config['storage']['local_path'] . '/' . $objectName;
         
-        $response = $this->client->get('/' . $this->config['storage']['container'] . '/' . $objectName, ['sink' => $this->config['storage']['local_path'] . '/' . $objectName]);
+        $response = $this->client->get('/' . $this->config['storage']['container'] . '/' . $objectName, ['sink' => $filePath]);
         
         if ($response->getStatusCode() == 200) {
-            return $this->config['storage']['local_path'].'/'.$objectName;
+            chmod($filePath, 0777);
+            return $filePath;
         }
         
         return false;
