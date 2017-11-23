@@ -27,7 +27,6 @@ class DownloadService extends OracleService
         $response = $this->client->get('/' . $this->config['storage']['container'] . '/' . $objectName, ['sink' => $filePath]);
         
         if ($response->getStatusCode() == 200) {
-            chmod($filePath, 0777);
             return $filePath;
         }
         
