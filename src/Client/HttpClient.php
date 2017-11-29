@@ -36,6 +36,7 @@ class HttpClient
     const HEADER_KEY_TOKEN = 'X-Auth-Token';
     const HEADER_KEY_USER = 'X-Storage-User';
     const HEADER_KEY_PASSWORD = 'X-Storage-Pass';
+    const CONNECT_TIMEOUT = 8;
 
     public static $failedOnce = false;
     
@@ -52,9 +53,10 @@ class HttpClient
         if (self::$client != null) {
             return self::$client;
         }
-
+        
         self::$client = new Client([
-            'verify' => false,
+            'verify'  => false,
+            'connect_timeout' => self::CONNECT_TIMEOUT,
             'handler' => self::makeAuthHandler($config),
         ]);
 
