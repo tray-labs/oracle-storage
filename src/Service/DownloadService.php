@@ -24,6 +24,10 @@ class DownloadService extends OracleService
     
         $filePath = $this->config['storage']['local_path'] . '/' . $objectName;
         
+        if (!empty($this->config['storage']['cache']) && $this->config['storage']['cache'] && file_exists($filePath)) {
+            return $filePath;
+        }
+        
         $response = $this->client->get('/' . $this->config['storage']['container'] . '/' . $objectName, ['sink' => $filePath]);
         
         if ($response->getStatusCode() == 200) {
