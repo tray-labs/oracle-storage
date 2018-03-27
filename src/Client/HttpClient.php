@@ -36,7 +36,7 @@ class HttpClient
     const HEADER_KEY_TOKEN = 'X-Auth-Token';
     const HEADER_KEY_USER = 'X-Storage-User';
     const HEADER_KEY_PASSWORD = 'X-Storage-Pass';
-    const CONNECT_TIMEOUT = 8;
+    const CONNECT_TIMEOUT = 5;
 
     public static $failedOnce = false;
     
