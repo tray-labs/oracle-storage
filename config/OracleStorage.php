@@ -10,7 +10,8 @@ return [
         'auth_uri' => getenv('ORACLE_STORAGE_AUTH_URI')
     ],
     'storage' => [
-        'container' => getenv('ORACLE_STORAGE_CONTAINER'),
-        'local_path' => getenv('ORACLE_STORAGE_LOCAL_PATH')
+        'container'  => getenv('ORACLE_STORAGE_CONTAINER'),
+        'local_path' => getenv('ORACLE_STORAGE_LOCAL_PATH'),
+        'cache'  => getenv('ORACLE_STORAGE_CACHE')
     ]
 ];
