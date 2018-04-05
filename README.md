@@ -23,7 +23,8 @@ return [
     ],
     'storage' => [
         'container' => 'yourContainer',
-        'local_path' => 'localWhereDoYouSaveTheFile'
+        'local_path' => 'localWhereDoYouSaveTheFile',
+        'cache' => true
     ]
 ];
 ```
